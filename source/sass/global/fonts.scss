@@ -1,18 +1,44 @@
-// @font-face {
-//   font-style: normal;
-//   font-weight: 400;
-//   font-family: "Rouble";
+@font-face {
+  font-style: normal;
+  font-weight: 1000;
+  font-family: "Druk Condensed Super Web";
 
-//   font-display: swap;
-//   src:
-//     url("../fonts/rouble.woff2") format("woff2");
-// }
+  font-display: swap;
+  src: url("../fonts/Druk-Condensed-Super-Web.woff2") format("woff2");
+}
 
 @font-face {
   font-style: normal;
   font-weight: 400;
-  font-family: "";
+  font-family: "Roboto Mono";
 
   font-display: swap;
-  src: url("../fonts/.woff2") format("woff2");
+  src: url("../fonts/RobotoMono-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Roboto Mono";
+
+  font-display: swap;
+  src: url("../fonts/RobotoMono-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-style: italic;
+  font-weight: 400;
+  font-family: "Roboto Mono";
+
+  font-display: swap;
+  src: url("../fonts/RobotoMono-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-style: italic;
+  font-weight: 500;
+  font-family: "Roboto Mono";
+
+  font-display: swap;
+  src: url("../fonts/RobotoMono-MediumItalic.woff2") format("woff2");
 }
