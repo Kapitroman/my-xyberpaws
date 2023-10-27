@@ -14,10 +14,10 @@ body {
 html {
   font-style: normal;
   font-weight: 400;
-  font-size: $fz-default;
-  line-height: 22px;
+  font-size: size-desktop($fz-default);
+  line-height: size(22px);
   font-family: $ff-roboto-mono;
-  color: $color-default-black;
+  color: $color-navy-blue;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -25,17 +25,21 @@ html {
   text-rendering: optimizeLegibility;
   // если по прежнему есть проблемы с выравниванием
   // https://transfonter.org/ - включите настройку https://prnt.sc/12rnt6g и переконвертируйте шрифт
+
+  @include vp-767 {
+    font-size: size-mobile($fz-default);
+  }
 }
 
 body {
   width: 100%;
   height: 100%;
 
-  background-color: $color-default-white;
+  background-color: $color-white-smoke;
 }
 
 a {
-  color: $color-default-black;
+  color: $color-navy-blue;
   text-decoration: none;
 }
 
@@ -126,4 +130,24 @@ button,
 [type="reset"],
 [type="submit"] {
   appearance: none;
+}
+
+[type="button"]:focus-visible,
+[type="reset"]:focus-visible,
+[type="submit"]:focus-visible,
+button:focus-visible,
+a {
+  &:focus-visible {
+    outline: none;
+    box-shadow: inset 0 0 0 1px $color-default-white;
+  }
+}
+
+a[href],
+button {
+  transition: opacity $trans-default;
+
+  @include hover-focus {
+    opacity: 0.7;
+  }
 }
