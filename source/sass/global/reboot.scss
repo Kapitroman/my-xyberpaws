@@ -17,6 +17,7 @@ html {
   font-size: size-desktop($fz-default);
   line-height: size(22px);
   font-family: $ff-roboto-mono;
+  letter-spacing: size(-0.64px);
   color: $color-navy-blue;
 
   -webkit-font-smoothing: antialiased;

@@ -32,8 +32,8 @@ mixin header(headerMods, currentUrl)
       +logo()
       nav.header__nav
         ul.header__list
-          each link in headerLinks
-            li.header__item
+          each link, index in headerLinks
+            li(class = `header__item header__item--${index}`)
               a.header__link(href=link.href)= link.text
         +socials()
       button.header__burger(type="button", data-burger, aria-label="Переключатель отображения меню", aria-pressed="false")

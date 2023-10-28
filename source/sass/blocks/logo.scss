@@ -1,0 +1,15 @@
+.logo {
+  display: flex;
+
+  svg {
+    width: size(104px);
+    height: size(60px);
+  }
+
+  @include vp-767 {
+    svg {
+      width: size(87px);
+      height: size(50px);
+    }
+  }
+}
