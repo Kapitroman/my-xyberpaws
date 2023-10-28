@@ -1,0 +1,23 @@
+mixin socials()
+  -
+    const socialsData = [
+      {
+        name: "facebook",
+        href: "#"
+      },
+      {
+        name: "twitter",
+        href: "#"
+      },
+      {
+        name: "instagram",
+        href: "#"
+      },
+    ]
+
+  ul.socials
+    each item in socialsData
+      li.socials__item
+        a.socials__link(href=item.href)
+          +icon(item.name, 30, 30)
+          span.visually-hidden= item.name
