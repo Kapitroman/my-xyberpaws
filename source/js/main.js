@@ -4,6 +4,11 @@ import {Form} from './modules/form-validate/form';
 import {CustomSelect} from './modules/select/custom-select';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 
+import './utils/locomotive-scroll';
+import {initLocomotiveScroll} from './modules/init-locomotive-scroll';
+import {Burger} from './modules/burger';
+import {StickyHeader} from './modules/sticky-header';
+
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -15,6 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   // ---------------------------------
+  initLocomotiveScroll();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
@@ -27,6 +33,11 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+
+    const burger = new Burger();
+    burger.init();
+    const stickyHeader = new StickyHeader();
+    stickyHeader.init();
   });
 });
 

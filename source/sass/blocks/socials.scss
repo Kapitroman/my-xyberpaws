@@ -11,4 +11,16 @@
   &__link {
     display: flex;
   }
+
+  &__item {
+    transform: scale(0);
+
+    transition: transform $trans-default;
+  }
+}
+
+.is-open {
+  .socials__item {
+    transform: scale(1);
+  }
 }
