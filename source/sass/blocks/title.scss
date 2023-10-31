@@ -1,0 +1,25 @@
+.title {
+  margin: 0;
+
+  font-family: $ff-druk-cond-super;
+  font-style: normal;
+  font-weight: 1000;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  clip-path: polygon(0 0, 100% 0, 100% 106%, 0% 106%);
+}
+
+.title--color-white {
+  color: $color-default-white;
+}
+
+h1.title {
+  font-size: size(120px);
+  line-height: size(96px);
+}
+
+h2.title {
+  font-size: size(80px);
+  line-height: size(64px);
+}
