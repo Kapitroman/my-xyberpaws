@@ -1,13 +1,31 @@
 .btn {
   display: inline-flex;
-  padding: 10px 20px;
-  border: none;
+  padding: size(12px) size(24px);
+  border-radius: size(5px);
+  border: size(1px) solid $color-hollywood-cerise;
 
   color: $color-default-white;
 
   background-color: $color-hollywood-cerise;
 
   cursor: pointer;
+
+  &--transparent {
+    color: $color-hollywood-cerise;
+
+    background-color: $color-transparent;
+  }
+
+  &--slider {
+    display: flex;
+
+    padding: size(20px) size(19px);
+
+    svg {
+      width: size(12px);
+      height: size(10px);
+    }
+  }
 
   &:disabled {
     opacity: 0.5;

@@ -1,6 +1,7 @@
 const moveTo = () => {
   const MoveTo = (() => {
     const header = document.querySelector('.header');
+
     let headerHeight = header.offsetHeight;
     /**
      * Defaults
