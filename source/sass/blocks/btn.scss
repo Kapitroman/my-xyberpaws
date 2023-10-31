@@ -27,6 +27,14 @@
     }
   }
 
+  &--big {
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: size(124px);
+  }
+
   &:disabled {
     opacity: 0.5;
 
