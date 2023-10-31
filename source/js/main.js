@@ -1,13 +1,12 @@
 import {mobileVhFix} from './utils/mobile-vh-fix.js';
-import {initModals} from './modules/modals/init-modals';
-import {Form} from './modules/form-validate/form';
-import {CustomSelect} from './modules/select/custom-select';
-import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
+// import {initModals} from './modules/modals/init-modals';
+// import {Form} from './modules/form-validate/form';
+// import {CustomSelect} from './modules/select/custom-select';
+// import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 
-import './utils/locomotive-scroll';
-import {initLocomotiveScroll} from './modules/init-locomotive-scroll';
 import {Burger} from './modules/burger';
 import {StickyHeader} from './modules/sticky-header';
+import {initMoveTo} from './modules/init-move-to.js';
 
 // ---------------------------------
 
@@ -20,24 +19,24 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   // ---------------------------------
-  initLocomotiveScroll();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    initModals();
-    uploadFile();
-    uploadImageDrop();
-    const select = new CustomSelect();
-    select.init();
-    const form = new Form();
-    window.form = form;
-    form.init();
+    // initModals();
+    // uploadFile();
+    // uploadImageDrop();
+    // const select = new CustomSelect();
+    // select.init();
+    // const form = new Form();
+    // window.form = form;
+    // form.init();
 
     const burger = new Burger();
     burger.init();
     const stickyHeader = new StickyHeader();
     stickyHeader.init();
+    initMoveTo();
   });
 });
 

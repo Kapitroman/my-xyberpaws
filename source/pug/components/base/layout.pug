@@ -37,10 +37,12 @@ html(lang="en")
       if (hasHeader)
         +header(headerMods, currentUrl)
 
-      block main
+      div(data-scroll-container)
+        div(data-scroll-section)
+          block main
 
-      if (hasFooter)
-        +footer(footerMods)
+          if (hasFooter)
+            +footer(footerMods)
 
     block modals
 

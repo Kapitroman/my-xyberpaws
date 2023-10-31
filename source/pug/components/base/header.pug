@@ -27,14 +27,14 @@ mixin header(headerMods, currentUrl)
       },
     ]
 
-  header.header.header--sticky(class=headerMods, data-header="sticky")
+  header.header.header--sticky.header--white-smoke(class=headerMods, data-fix-block, data-header="sticky")
     .container
       +logo()
       nav.header__nav
         ul.header__list
           each link, index in headerLinks
             li(class = `header__item header__item--${index}`)
-              a.header__link(href=link.href)= link.text
+              a.header__link(href=link.href, data-trigger)= link.text
         +socials()
       button.header__burger(type="button", data-burger, aria-label="Переключатель отображения меню", aria-pressed="false")
 

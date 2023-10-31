@@ -16,6 +16,8 @@ export class StickyHeader {
 
     this._onWindowScroll = this._onWindowScroll.bind(this);
     this._onLocomotiveScroll = this._onLocomotiveScroll.bind(this);
+
+    this._stickyHeader.classList.remove('header--white-smoke');
   }
 
   init() {
@@ -65,6 +67,7 @@ export class StickyHeader {
 
   _onWindowScroll() {
     this._scrollY = document.documentElement.scrollTop;
+    this._checkThemeFirstScreen();
     this._checkTheme();
 
     if (this._checkScrollDirection() === 'down' && this._scrollY > this._hidePoint) {
@@ -89,5 +92,13 @@ export class StickyHeader {
         this._stickyHeader.classList.add(this._activeTheme);
       }
     });
+  }
+
+  _checkThemeFirstScreen() {
+    if (this._scrollY > this._headerHeight) {
+      this._stickyHeader.classList.add('header--white-smoke')
+    } else {
+      this._stickyHeader.classList.remove('header--white-smoke');
+    }
   }
 }

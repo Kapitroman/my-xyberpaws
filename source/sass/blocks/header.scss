@@ -2,7 +2,8 @@
   z-index: 30;
   padding: size(20px) 0;
 
-  background-color: $color-white-smoke;
+  // background-color: $color-white-smoke;
+  background-color: $color-transparent;
 
   transition: transform $trans-default, background-color $trans-default;
 
@@ -17,8 +18,14 @@
     width: 100%;
   }
 
+  &--white-smoke {
+    background-color: $color-white-smoke;
+    box-shadow: 2px 4px 8px 0 rgba($color-default-black, 0.1), 0 0 0 8px rgba($color-default-white, 0.7);
+  }
+
   &.is-hidden {
     transform: translateY(-100%);
+    box-shadow: none;
   }
 
   .container {
