@@ -20,7 +20,12 @@
 
   &--white-smoke {
     background-color: $color-white-smoke;
-    box-shadow: 2px 4px 8px 0 rgba($color-default-black, 0.1), 0 0 0 8px rgba($color-default-white, 0.7);
+    box-shadow: size(2px) size(4px) size(8px) 0 rgba($color-default-black, 0.1), 0 0 0 size(8px) rgba($color-default-white, 0.7);
+
+    @include vp-767 {
+      box-shadow: size(1px) size(2px) size(4px) 0 rgba($color-default-black, 0.1), 0 0 0 size(4px) rgba($color-default-white, 0.7);
+    }
+
   }
 
   &.is-hidden {
