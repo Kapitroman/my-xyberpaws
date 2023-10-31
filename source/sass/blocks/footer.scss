@@ -1,5 +1,84 @@
 .footer {
-  padding: 40px 0;
+  padding: size(20px) 0;
 
-  background-color: $color-navy-blue;
+  font-size: size(14px);
+  line-height: size(19px);
+
+  background-color: $color-transparent;
+
+  @include vp-767 {
+    padding-bottom: size(10px);
+  }
+
+  .container {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include vp-767 {
+      flex-direction: column;
+      gap: size(40px);
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+
+    width: size(260px);
+
+    @include vp-767 {
+      width: auto;
+    }
+  }
+
+  &__copyright {
+    margin-left: size(20px);
+  }
+
+  .socials {
+    margin: 0 size(20px);
+  }
+
+  .socials__item {
+    transform: initial;
+  }
+
+  .socials__link {
+    color: $color-hollywood-cerise;
+  }
+
+  &__nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: size(20px);
+    justify-content: space-between;
+
+    width: size(262px);
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    @include vp-767 {
+      width: 100%;
+    }
+  }
+
+  &__nav-item:first-child {
+    position: absolute;
+    left: size(174px);
+
+    @include vp-767 {
+      position: static;
+    }
+  }
+
+  &__nav-item {
+    @include vp-767 {
+      width: min-content;
+    }
+  }
 }

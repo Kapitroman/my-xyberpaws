@@ -187,6 +187,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: size(4px);
 
     width: size(50px);
     height: size(50px);
@@ -218,18 +219,18 @@
     }
 
     &::before {
-      transform: translateY(size(-2px));
+      //transform: translateY(size(-2px));
 
       .is-open & {
-        transform: translateY(1px) rotate(-45deg);
+        transform: translateY(size(2.5px)) rotate(-45deg);
       }
     }
 
     &::after {
-      transform: translateY(size(2px));
+      //transform: translateY(size(2px));
 
       .is-open & {
-        transform: translateY(-0px) rotate(45deg);
+        transform: translateY(size(-2.5px)) rotate(45deg);
       }
     }
 

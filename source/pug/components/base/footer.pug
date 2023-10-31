@@ -1,3 +1,14 @@
 mixin footer(footerMods)
   footer.footer(class=footerMods)
     .container
+      .footer__info
+        +logo()
+        //- .footer__copyright ©2023 Xyperpaws
+      +socials()
+      ul.footer__nav-list
+        li.footer__nav-item
+          a(href="#").footer__nav-link  ©2023 Xyperpaws
+        li.footer__nav-item
+          a(href="#").footer__nav-link Terms & Conditions
+        li.footer__nav-item
+          a(href="#").footer__nav-link Design INSAIM
