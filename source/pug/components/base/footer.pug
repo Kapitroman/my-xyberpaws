@@ -1,14 +1,25 @@
 mixin footer(footerMods)
+  -
+    const footerLinks = [
+      {
+        href: "#",
+        text: "©2023 Xyperpaws"
+      },
+      {
+        href: "#",
+        text: "Terms & Conditions"
+      },
+      {
+        href: "#",
+        text: "Design INSAIM"
+      },
+    ]
   footer.footer(class=footerMods)
     .container
       .footer__info
         +logo()
-        //- .footer__copyright ©2023 Xyperpaws
       +socials()
       ul.footer__nav-list
-        li.footer__nav-item
-          a(href="#").footer__nav-link  ©2023 Xyperpaws
-        li.footer__nav-item
-          a(href="#").footer__nav-link Terms & Conditions
-        li.footer__nav-item
-          a(href="#").footer__nav-link Design INSAIM
+        each link in footerLinks
+          li.footer__nav-item
+            a(href=link.href).footer__nav-link=link.text
