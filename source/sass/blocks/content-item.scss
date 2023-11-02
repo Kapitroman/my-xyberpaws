@@ -1,0 +1,49 @@
+.content-item {
+  position: relative;
+
+  max-width: size(427px); ////
+
+  padding: size(20px);
+  border-radius: size(5px);
+
+  background-color: $color-default-white;
+
+  &::before {
+    position: absolute;
+    top: size(25px);
+    left: size(20px);
+
+    content: "";
+
+    width: size(20px);
+    height: size(20px);
+    border-radius: 50%;
+
+    border: size(8px) solid $color-navy-blue;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: size(10px);
+    padding-left: size(30px);
+
+    font-style: italic;
+    font-weight: 500;
+    font-size: size(22px);
+    line-height: size(30px);
+  }
+
+  &__description {
+    margin: 0;
+    padding-left: size(30px);
+
+    color: $color-hollywood-cerise;
+  }
+
+  &--with-out-title {
+    &::before {
+      top: size(20px);
+      border-color: $color-hollywood-cerise;
+    }
+  }
+}

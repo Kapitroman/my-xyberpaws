@@ -16,6 +16,21 @@ block main
 
     +hero()
 
+    -
+      const dataItems = [
+        {
+          title: "Need a website ASAP!",
+          description: "You got it! Choose a platform like Shopify, OpenCart, and WordPress, or tell us to develop something custom.",
+        },
+        {
+          title: false,
+          description: "Added upselling to the Thank you page to increase the conversion rate by 5.64%",
+        }
+      ];
+
+    +content-item(dataItems[0])
+    +content-item(dataItems[1]).content-item--with-out-title
+
     +intro()
 
     +intro()

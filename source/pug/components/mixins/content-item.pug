@@ -1,0 +1,5 @@
+mixin content-item(item)
+  .content-item&attributes(attributes)
+    if item.title
+      p.content-item__title=item.title
+    p.content-item__description=item.description
