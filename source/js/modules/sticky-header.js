@@ -17,13 +17,14 @@ export class StickyHeader {
     this._onWindowScroll = this._onWindowScroll.bind(this);
     this._onLocomotiveScroll = this._onLocomotiveScroll.bind(this);
 
-    this._stickyHeader.classList.remove('header--white-smoke');
+    // this._stickyHeader.classList.remove('header--white-smoke');
   }
 
   init() {
     if (!this._stickyHeader) {
       return;
     }
+    this._stickyHeader.classList.remove('header--white-smoke');
     this._checkTheme();
     if (window.ls) {
       window.ls.on('scroll', this._onLocomotiveScroll);

@@ -1,0 +1,199 @@
+.hero {
+  display: grid;
+
+  opacity: 0;
+
+  &__content-images,
+  &__content-texts {
+    grid-area: 1 / -1;
+  }
+
+  &__content-images {
+    position: relative;
+
+    @include vp-767 {
+      margin-top: size(310px);
+      overflow-x: hidden;
+    }
+  }
+
+  &__image-helix {
+    img {
+      display: block;
+
+      width: 100%;
+      aspect-ratio: 1440 / 862;
+
+      @include vp-767 {
+        aspect-ratio: 375 / 410;
+      }
+    }
+  }
+
+  &__image-screen {
+    position: absolute;
+    right: 3%;
+    top: 34.5%;
+
+    @include vp-767 {
+      right: -1%;
+      top: 50.5%;
+    }
+
+    img {
+      display: block;
+
+      width: size(238px);
+      aspect-ratio: 238 / 159;
+
+      @include vp-767 {
+        width: size(103px);
+      }
+    }
+  }
+
+  &__image-success {
+    position: absolute;
+    right: 1%;
+    top: 34.5%;
+
+    opacity: 0;
+
+    @include vp-767 {
+      right: -2%;
+      top: 50.5%;
+    }
+
+    img {
+      display: block;
+      width: size(284px);
+      aspect-ratio: 284 / 127;
+
+      @include vp-767 {
+        width: size(120px);
+      }
+    }
+  }
+
+  &__stars {
+    position: absolute;
+    right: 1%;
+    top: 34.5%;
+
+    width: size(284px);
+    aspect-ratio: 284 / 127;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include vp-767 {
+      right: -2%;
+      top: 50.5%;
+
+      width: size(120px);
+    }
+  }
+
+  .star {
+    opacity: 0;
+  }
+
+  .svg-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    @include vp-767 {
+      top: 15%;
+    }
+  }
+
+  .svg-line path {
+    fill: none;
+  }
+
+  &__image-cms {
+    position: absolute;
+    top: 45%;
+    left: 5%;
+
+    opacity: 0;
+
+    width: size(100px);
+
+    @include vp-767 {
+      top: 60%;
+      left: 12%;
+
+      width: size(30px);
+    }
+  }
+
+  &__image-cms--wp {
+    aspect-ratio: 236 / 241;
+  }
+
+  &__image-cms--shopify {
+    aspect-ratio: 186 / 220;
+  }
+
+  &__image-cms--stack {
+    aspect-ratio: 205 / 198;
+  }
+
+  &__image-cms--cart {
+    aspect-ratio: 193 / 196;
+  }
+
+  &__image-cms--php {
+    aspect-ratio: 191 / 195;
+  }
+
+  &__content-texts {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    width: size(702px);
+    margin-top: size(207px);
+    margin-bottom: size(30px);
+
+    text-align: center;
+
+    @include vp-767 {
+      width: size(330px);
+      margin-top: size(110px);
+    }
+  }
+
+  &__description {
+    width: size(373px);
+
+    margin: 0;
+    margin-bottom: size(40px);
+
+    text-align: center;
+
+    @include vp-767 {
+      width: size(330px);
+    }
+  }
+
+  &__buttons {
+    text-align: center;
+  }
+}

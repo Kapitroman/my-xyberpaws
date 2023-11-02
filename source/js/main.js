@@ -1,4 +1,4 @@
-import {mobileVhFix} from './utils/mobile-vh-fix.js';
+import {mobileVhFix} from './utils/mobile-vh-fix';
 // import {initModals} from './modules/modals/init-modals';
 // import {Form} from './modules/form-validate/form';
 // import {CustomSelect} from './modules/select/custom-select';
@@ -6,7 +6,9 @@ import {mobileVhFix} from './utils/mobile-vh-fix.js';
 
 import {Burger} from './modules/burger';
 import {StickyHeader} from './modules/sticky-header';
-import {initMoveTo} from './modules/init-move-to.js';
+import {initMoveTo} from './modules/init-move-to';
+
+import {AnimationHero} from './modules/animationHero';
 
 // ---------------------------------
 
@@ -37,6 +39,9 @@ window.addEventListener('DOMContentLoaded', () => {
     const stickyHeader = new StickyHeader();
     stickyHeader.init();
     initMoveTo();
+
+    new AnimationHero();
+
   });
 });
 
