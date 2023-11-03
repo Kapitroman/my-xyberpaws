@@ -1,0 +1,43 @@
+mixin we-can-help-you()
+  - const title = "we can help you if";
+
+  -
+    const contentItemData = [
+      {
+        title: "Need a website ASAP!",
+        description: "You got it! Choose a platform like Shopify, OpenCart, and WordPress, or tell us to develop something custom."
+      },
+      {
+        title: "My website is meh...",
+        description: "It all can be finished and fixed, no worries!"
+      },
+      {
+        title: "How to improve my page?",
+        description: "Let us do a data-based audit and tell you how to make your e-commerce business more profitable."
+      },
+      {
+        title: "Potential customers can't find my site :(",
+        description: "Let's make it more visible using SEO-optimization"
+      },
+      {
+        title: "Want my website to look better",
+        description: "No problem. Our designers are the best when it comes to UX/UI-friendly interfaces."
+      },
+      {
+        title: "I have a unique request",
+        description: "Fantastic! We can help you make it happen by developing a custom solution from scratch."
+      },
+    ];
+
+  - const button = { href: "./booking-call.html", text: "Book A Call" };
+
+  section#help.we-can-help-you
+    .container
+      h2.title.we-can-help-you__title=title
+      .we-can-help-you__content
+        each item in contentItemData
+          +content-item(item)
+      +btn({
+        href: button.href,
+        text: button.text
+      })

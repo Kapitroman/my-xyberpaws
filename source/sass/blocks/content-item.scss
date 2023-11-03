@@ -1,8 +1,6 @@
 .content-item {
   position: relative;
 
-  max-width: size(427px); ////
-
   padding: size(20px);
   border-radius: size(5px);
 
@@ -31,6 +29,11 @@
     font-weight: 500;
     font-size: size(22px);
     line-height: size(30px);
+
+    @include vp-767 {
+      font-size: size(20px);
+      line-height: size(27px);
+    }
   }
 
   &__description {
