@@ -8,7 +8,8 @@ import {Burger} from './modules/burger';
 import {StickyHeader} from './modules/sticky-header';
 import {initMoveTo} from './modules/init-move-to';
 
-import {AnimationHero} from './modules/animationHero';
+import {AnimationHero} from './modules/animation-hero';
+import {AnimationWeCanHelpYou} from './modules/animation-we-can-help-you';
 
 // ---------------------------------
 
@@ -41,6 +42,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initMoveTo();
 
     new AnimationHero();
+    new AnimationWeCanHelpYou();
 
   });
 });
