@@ -1,7 +1,17 @@
 mixin hero()
-  -const title = "Websites that keep your business going"
-  -const description = "We develop and maintain pages and stores that actually sell"
-  -const textButton = "Book A Call"
+  - const title = "Websites that keep your business going";
+  - const description = "We develop and maintain pages and stores that actually sell";
+  -
+    const buttons = [
+      {
+        href: "./booking-call.html",
+        text: "Order Form"
+      },
+      {
+        href: "./booking-call.html",
+        text: "Book A Call"
+      }
+    ];
 
   section.hero
     .hero__content-images
@@ -44,10 +54,10 @@ mixin hero()
       p.hero__description=description
       .hero__buttons
         +btn({
-          href: "#",
-          text: textButton,
+          href: buttons[0].href,
+          text: buttons[0].text,
         })
         +btn({
-          href: "#",
-          text: textButton,
+          href: buttons[1].href,
+          text: buttons[1].text,
         }).btn--transparent
