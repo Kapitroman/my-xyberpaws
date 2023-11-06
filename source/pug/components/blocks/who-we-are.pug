@@ -1,0 +1,65 @@
+mixin who-we-are()
+  - const title = "Who we are? Who we are? Who we are? Who we are? Who we are? Who we are?";
+  - const description = "A team of experts with over a decade of experience on the e-commerce market. We create, customize, and update hi-tech solutions to help your business appeal to even the pickiest clients."
+  -
+    const employees = [
+      {
+        icon: "snake",
+        width: 457,
+        height: 450,
+      },
+      {
+        icon: "bird",
+        width: 397,
+        height: 450,
+      },
+      {
+        icon: "cat",
+        width: 406,
+        height: 450,
+      },
+      {
+        icon: "cochlea",
+        width: 290,
+        height: 450,
+      },
+      {
+        icon: "bear",
+        width: 280,
+        height: 450,
+      },
+      {
+        icon: "turtle",
+        width: 247,
+        height: 450,
+      },
+      {
+        icon: "mole",
+        width: 363,
+        height: 450,
+      }
+    ];
+
+  section#about.who-we-are
+    +title-double-rotation(title)
+    p.who-we-are__description=description
+    .who-we-are__content-animation
+      .who-we-are__employees-gallery
+          .who-we-are__employees-icon
+            include ../../../img/svg/snake.svg
+          .who-we-are__employees-icon
+            include ../../../img/svg/bird.svg
+          .who-we-are__employees-icon
+            include ../../../img/svg/cat.svg
+          .who-we-are__employees-icon
+            include ../../../img/svg/cochlea.svg
+          .who-we-are__employees-icon
+            include ../../../img/svg/bear.svg
+          .who-we-are__employees-icon
+            include ../../../img/svg/turtle.svg
+          .who-we-are__employees-icon
+            include ../../../img/svg/mole.svg
+      .who-we-are__employees-persona
+        each item in employees
+          .who-we-are__employees-item(class = `who-we-are__employees-item--${item.icon}`)
+            +picture("content", item.icon, "png", item.width, item.height, item.icon, true)

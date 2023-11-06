@@ -1,0 +1,109 @@
+.who-we-are {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 size(100px) 0;
+
+  &__description {
+    width: size(468px);
+    margin: 0 auto;
+    margin-top: size(20px);
+    margin-bottom: size(110px);
+
+    text-align: center;
+
+    @include vp-767 {
+      width: size(355px);
+      margin-top: size(40px);
+      margin-bottom: size(40px);
+    }
+  }
+
+  &__content-animation {
+    display: flex;
+    gap: 8%;
+    padding: 0 size(95px);
+
+    @include vp-767 {
+      padding: 0 size(10px);
+    }
+  }
+
+  &__employees-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: size(20px);
+
+    width: 46%;
+  }
+
+  &__employees-icon {
+    width: calc((100% - 2 * size(20px)) / 3);
+    aspect-ratio: 1 / 1;
+
+    svg {
+      display: block;
+
+      width: 100%;
+      height: 100%;
+
+      fill: $color-gainsboro;
+    }
+  }
+
+  &__employees-icon:last-child {
+    margin: 0 auto;
+  }
+
+  &__employees-persona {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 46%;
+  }
+
+  &__employees-item {
+    display: none;
+
+    height: size(450px);
+
+    @include vp-767 {
+      height: size(115px);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+
+  &__employees-item--snake {
+    aspect-ratio: 457 / 450;
+  }
+
+  &__employees-item--bird {
+    aspect-ratio: 397 / 450;
+  }
+
+  &__employees-item--cat {
+    aspect-ratio: 406 / 450;
+  }
+
+  &__employees-item--cochlea {
+    aspect-ratio: 290 / 450;
+  }
+
+  &__employees-item--bear {
+    aspect-ratio: 280 / 450;
+  }
+
+  &__employees-item--turtle {
+    aspect-ratio: 247 / 450;
+  }
+
+  &__employees-item--mole {
+    aspect-ratio: 363 / 450;
+  }
+}

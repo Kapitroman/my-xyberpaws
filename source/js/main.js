@@ -10,7 +10,7 @@ import {initMoveTo} from './modules/init-move-to';
 
 import {AnimationHero} from './modules/animation-hero';
 import {AnimationWeCanHelpYou} from './modules/animation-we-can-help-you';
-
+import {AnimationWhoWeAre} from './modules/animation-who-we-are';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -43,7 +43,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     new AnimationHero();
     new AnimationWeCanHelpYou();
-
+    new AnimationWhoWeAre();
   });
 });
 

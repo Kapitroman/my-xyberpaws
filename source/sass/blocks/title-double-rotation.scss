@@ -1,0 +1,37 @@
+.title-double-rotation {
+  overflow: hidden;
+
+  margin-top: size(-25px);
+  margin-bottom: size(-25px);
+
+  &__container {
+    position: relative;
+    z-index: 3;
+
+    width: calc(100% + size(730px));
+    margin-left: size(-365px);
+    padding: size(20px) 0;
+
+    transform: translateY(50%) rotate(3deg);
+    transform-origin: center center;
+
+    background-color: $color-navy-blue;
+
+    .title--rotation {
+      position: relative;
+      top: size(-6px);
+      color: $color-default-white;
+    }
+  }
+
+  &__container--background {
+    z-index: 0;
+    transform: translateY(-50%) rotate(-3deg);
+
+    background-color: $color-default-white;
+
+    .title--rotation {
+      color: $color-white-smoke;
+    }
+  }
+}
