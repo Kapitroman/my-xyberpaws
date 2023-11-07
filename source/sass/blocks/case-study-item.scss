@@ -1,0 +1,153 @@
+.case-study-item {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  padding: size(40px);
+  border-radius: size(10px);
+
+  background-color: $color-default-white;
+
+  @include vp-767 {
+    flex-direction: column;
+
+    padding: size(40px) size(20px);
+  }
+
+  &::before {
+    position: absolute;
+    top: size(-35px);
+    left: calc(50% - size(35px));
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    counter-increment: section;
+    content: counter(section) "";
+
+    width: size(70px);
+    height: size(70px);
+    border-radius: 50%;
+    border: size(5px) solid $color-default-white;
+
+    font-family: $ff-druk-cond-super;
+    font-style: normal;
+    font-weight: 1000;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-size: size(30px);
+    line-height: size(24px);
+
+    color: $color-default-white;
+
+    background-color: $color-navy-blue;
+
+    @include vp-767 {
+      top: size(-28px);
+      left: calc(50% - size(28px));
+
+      width: size(56px);
+      height: size(56px);
+      border-width: size(3px);
+
+      font-size: size(20px);
+      line-height: size(16px);
+    }
+  }
+
+  &__content-texts {
+    display: flex;
+    flex-direction: column;
+
+    width: size(530px);
+    margin-right: size(66px);
+
+    @include vp-767 {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: size(40px);
+    }
+  }
+
+  h3.title {
+    margin-bottom: size(30px);
+  }
+
+  &__text {
+    margin: 0;
+
+    @include vp-767 {
+      margin-bottom: size(60px);
+    }
+  }
+
+  &__slogan {
+    margin-top: auto;
+    margin-bottom: size(15px);
+
+    text-transform: uppercase;
+  }
+
+  &__action-list {
+    display: flex;
+    flex-direction: column;
+    gap: size(10px);
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &__summary {
+    margin: 0;
+    margin-top: size(10px);
+    padding: size(20px) size(40px) size(20px) size(20px);
+    border-radius: size(5px);
+
+    color: $color-default-white;
+
+    background-color: $color-hollywood-cerise;
+  }
+
+  &__content-image {
+    width: size(567px);
+    aspect-ratio: 567 / 724;
+
+    @include vp-767 {
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+}
+
+.case-study-item--second {
+  .case-study-item__content-image {
+    width: size(530px);
+    aspect-ratio: 530 / 608;
+
+    @include vp-767 {
+      width: 100%;
+    }
+  }
+}
+
+.case-study-item--third {
+  .case-study-item__content-image {
+    width: size(567px);
+    aspect-ratio: 567 / 586;
+
+    @include vp-767 {
+      width: 100%;
+    }
+  }
+}

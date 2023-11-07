@@ -1,0 +1,116 @@
+.case-study {
+  padding-bottom: size(100px);
+
+  @include vp-767 {
+    padding-bottom: 40px;
+  }
+
+  .container {
+    @include vp-767 {
+      padding: 0;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+
+    counter-reset: section;
+
+    padding: size(60px) size(50px) size(144px) size(50px);
+    border-radius: size(20px);
+
+    background-color: $color-navy-blue;
+
+    @include vp-767 {
+      padding: size(60px) size(10px) size(80px) size(10px);
+    }
+  }
+
+  h2.title {
+    margin-bottom: size(70px);
+
+    color: $color-default-white;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: size(70px);
+
+    margin: 0;
+    margin-bottom: size(70px);
+    padding: 0;
+
+    list-style: none;
+
+    @include vp-767 {
+      margin-bottom: size(35px);
+    }
+  }
+
+  &__note {
+    width: size(310px);
+    margin: 0;
+    margin-left: size(561px);
+
+    color: $color-default-white;
+
+    @include vp-767 {
+      width: size(172px);
+      margin-left: size(180px);
+
+      font-size: size(14px);
+      line-height: size(19px);
+    }
+  }
+
+  &__designer {
+    position: absolute;
+    left: size(183px);
+    bottom: size(-170px);
+    z-index: 3;
+
+    width: size(436px);
+    height: size(450px);
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+
+    @include vp-767 {
+      left: size(-77px);
+      bottom: size(-12px);
+
+      width: size(231px);
+      height: size(238px);
+    }
+  }
+
+  &__designer-sign {
+    position: absolute;
+    right: size(330px);
+    bottom: size(47px);
+
+    width: size(391px);
+    height: size(56px);
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+
+    @include vp-767 {
+      width: size(210px);
+      height: size(66px);
+
+      right: size(10px);
+      bottom: size(37px);
+    }
+  }
+}

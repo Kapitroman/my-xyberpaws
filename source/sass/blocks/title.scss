@@ -35,19 +35,26 @@ h2.title {
 }
 
 .title.title--rotation {
-  // padding: size(20px) 0;
-
   font-size: size(120px);
   line-height: size(96px);
 
   white-space: nowrap;
 
-
-  // color: $color-default-white;
-
   @include vp-767 {
     font-size: size(70px);
     line-height: size(56px);
+  }
+}
+
+h3.title {
+  font-size: size(60px);
+  line-height: size(48px);
+
+  color: $color-navy-blue;
+
+  @include vp-767 {
+    font-size: size(40px);
+    line-height: size(32px);
   }
 }
 

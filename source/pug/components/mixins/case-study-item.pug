@@ -1,0 +1,15 @@
+mixin case-study-item(options)
+  - const addClass = options.addClass ? `case-study-item ${options.addClass}` : "case-study-item";
+  - const summary = options.summary ? options.summary : false
+  .div(class=addClass)&attributes(attributes)
+    .case-study-item__content-texts
+      h3.title=options.title
+      p.case-study-item__text=options.text
+      p.case-study-item__slogan=options.slogan
+      ul.case-study-item__action-list
+        each item in options.actionItems
+          +content-item(item).content-item--with-out-title
+      if summary
+        p.case-study-item__summary=summary
+    .case-study-item__content-image
+      +picture(options.image[0], options.image[1], options.image[2], options.image[3], options.image[4], options.image[5], options.image[6])

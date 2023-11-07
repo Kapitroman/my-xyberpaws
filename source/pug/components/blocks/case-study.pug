@@ -1,0 +1,57 @@
+mixin case-study()
+  - const title = "Case study";
+  -
+    const caseStudeItemData = [
+      {
+        title: "This is how we increased conversion and average order value for a puzzle store",
+        text: "Unidragon is your one stop shop for the coolest puzzles! We needed to make sure everyone and their mom knew about it.",
+        slogan: "What we did:",
+        actionItems: [
+          { description: "Added upselling to the Thank you page to increase the conversion rate by 5.64%" },
+          { description: "Created special offers to increase the average check by 12%" },
+          { description: "Created “Related products” bar to increase the average order value by 7%" },
+        ],
+        summary: "Together with other measures, this helped us increase the conversion rate by over 80% while the customers were spending 30% more on their orders.",
+        image: ["content", "study-case-1", "jpg", 567, 724, "study case image", true],
+      },
+      {
+        title: "Let me tell you how we’ve created one of the best wine stores on the market",
+        text: "Clear.Wine is an online-store that combines the beauty of traditional wine-making and the latest e-commerce technology",
+        slogan: "What we did:",
+        actionItems: [
+          { description: "A stylish and functional custom-made website with recommendations based on Vivino ratings" },
+          { description: "Multi-lingual search optimization, user-friendly interface, payments in different currencies" },
+          { description: "Transparent payment systems with tax-friendly checks and reports for different regions" },
+        ],
+        image: ["content", "study-case-2", "jpg", 530, 680, "study case image", true],
+        addClass: "case-study-item--second",
+      },
+      {
+        title: "How to promote software for accountants by creating a website ",
+        text: "OneFactura is a company that helps people simplify their accounting and tax-related chores through a convenient SaaS-solution. ",
+        slogan: "What we did:",
+        actionItems: [
+          { description: "A simple yet effective hi-tech solution tailored to the needs of the business" },
+          { description: "Cut costs by using a popular CMS platform " },
+          { description: "Did the job faster than our competitors would thanks to the available tools and frameworks" },
+        ],
+        image: ["content", "study-case-3", "jpg", 567, 586, "study case image", true],
+        addClass: "case-study-item--third",
+      },
+    ];
+  - const note = "With a team of great designers like myself, the visuals will always be your strength ";
+
+  section#cases.case-study
+    .container
+      .case-study__wrapper
+        h2.title=title
+        ul.case-study__list
+          each item in caseStudeItemData
+            +case-study-item(item)
+        p.case-study__note=note
+        .case-study__designer
+          img(src="img/svg/designer.svg", width="436", heiht="450" alt="graphic image cochlea")
+        .case-study__designer-sign
+          picture
+            source(srcset="img/svg/sign-designer-mob.svg" type="image/svg+xml" media="(max-width: 767px)")
+            img(src="img/svg/sign-designer-desk.svg", alt="graphic string designer")
