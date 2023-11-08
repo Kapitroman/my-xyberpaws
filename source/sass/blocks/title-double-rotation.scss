@@ -35,3 +35,13 @@
     }
   }
 }
+
+.title-double-rotation--reverse {
+  .title-double-rotation__container {
+    transform: translateY(50%) rotate(-3deg);
+  }
+
+  .title-double-rotation__container--background {
+    transform: translateY(-50%) rotate(3deg);
+  }
+}

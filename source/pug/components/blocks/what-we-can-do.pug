@@ -1,0 +1,34 @@
+mixin what-we-can-do()
+  - const title = "what we can do? what we can do? what we can do? what we can do? what we can do? what we can do?";
+  -
+    const contentItemData = [
+      {
+        title: "Create your perfect Shopify store",
+        description: "Fast, sleek, and data-driven – your customers will love it."
+      },
+      {
+        title: "Technical support",
+        description: "No more panic when something goes wrong. We’ll be there when you need us."
+      },
+      {
+        title: "Custom-made pages",
+        description: "You have a unique case? Perfect! We’ll make a website from scratch."
+      },
+    ];
+  - const button = { href: "./booking-call.html", text: "Book A Call" };
+  - const text = "You ask, we deliver: from a stunning-looking website to complex backend solutions ";
+
+  section#whatwedo.what-we-can-do
+    +title-double-rotation(title).title-double-rotation--reverse
+    .what-we-can-do__wrapper
+      .what-we-can-do__content-texts
+        ui.what-we-can-do__content-list
+          each item in contentItemData
+            +content-item(item)
+        +btn({
+          href: button.href,
+          text: button.text
+        }).btn--big
+      .what-we-can-do__content-image
+        p.what-we-can-do__text=text
+        img(src="img/svg/mail-manager.svg", width="748", heiht="501", alt="graphic image bird", loading="lazy")

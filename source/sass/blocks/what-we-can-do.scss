@@ -1,0 +1,93 @@
+.what-we-can-do {
+  padding-bottom: size(100px);
+
+  @include vp-767 {
+    padding-bottom: size(80px);
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: size(40px);
+    padding-left: size(107px);
+
+    @include vp-767 {
+      flex-direction: column;
+      //padding: 0 size(10px);
+      padding: 0;
+    }
+  }
+
+  &__content-texts {
+    width: size(530px);
+    margin-right: size(45px);
+
+    @include vp-767 {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: size(40px);
+      padding: 0 size(10px);
+    }
+  }
+
+  &__content-list {
+    display: flex;
+    flex-direction: column;
+    gap: size(10px);
+
+    margin: 0;
+    margin-bottom: size(10px);
+
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &__content-image {
+    position: relative;
+
+    width: size(748px);
+    aspect-ratio: 748 / 501;
+
+    @include vp-767 {
+      width: 100%;
+      aspect-ratio: 375 / 310;
+      padding-left: size(10px);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      @include vp-767 {
+        //position: absolute;
+        //left: size(30px);
+        object-position: size(25px);
+
+      }
+    }
+  }
+
+  &__text {
+    position: absolute;
+    left: size(21px);
+    top: 0;
+
+    width: size(265px);
+    margin: 0;
+
+    text-align: right;
+
+    @include vp-767 {
+      left: size(10px);
+
+      width: size(172px);
+
+      text-align: left;
+    }
+  }
+}
