@@ -1,0 +1,5 @@
+mixin review-item(review)
+  .review-item.swiper-slide
+    .review-item__wrapper(data-letter= review.author[0])
+      p.review-item__author=review.author
+      p.review-item__text=review.text

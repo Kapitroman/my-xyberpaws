@@ -3,7 +3,7 @@
 
 @import "vendor/normalize";
 // Swiper 8.4.7
-// @import "vendor/swiper";
+@import "vendor/swiper";
 // Global
 // ---------------------------------
 
@@ -36,6 +36,8 @@
 @import "blocks/title-double-rotation";
 @import "blocks/case-study-item";
 @import "blocks/case-study";
+@import "blocks/review-item";
+@import "blocks/reviews";
 // ---------------------------------
 
 // ❗❗❗ запрещено использовать изображения в css, касается как jpg \ png, так и svg

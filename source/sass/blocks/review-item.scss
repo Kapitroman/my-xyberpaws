@@ -1,0 +1,87 @@
+.review-item {
+  width: size(460px);
+  padding-top: size(35px);
+  background-color: $color-transparent;
+
+  &__wrapper {
+    position: relative;
+
+    padding: size(40px) size(44px) size(82px) size(44px);
+    border-radius: size(10px);
+
+    background-color: $color-default-white;
+
+    &::before {
+      position: absolute;
+      top: size(-35px);
+      left: calc(50% - size(35px));
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      content: attr(data-letter);
+
+      width: size(70px);
+      height: size(70px);
+      border-radius: 50%;
+      border: size(5px) solid $color-default-white;
+
+      font-family: $ff-druk-cond-super;
+      font-style: normal;
+      font-weight: 1000;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      font-size: size(30px);
+      line-height: size(24px);
+      color: $color-default-white;
+
+      background-color: $color-navy-blue;
+    }
+  }
+
+  &__author {
+    margin: 0;
+    margin-bottom: size(63px);
+
+    font-style: italic;
+    font-size: size(14px);
+    line-height: size(19px);
+    text-align: center;
+    letter-spacing: -0.04em;
+  }
+
+  &__text {
+    margin: 0;
+  }
+}
+
+.review-item:nth-child(3n + 1) {
+  .review-item__wrapper::before {
+    background-color: $color-hollywood-cerise;
+  }
+
+  .review-item__author {
+    color: $color-hollywood-cerise;
+  }
+}
+
+.review-item:nth-child(3n + 2) {
+  .review-item__wrapper::before {
+    background-color: $color-harlequin;
+  }
+
+  .review-item__author {
+    color: $color-harlequin;
+  }
+}
+
+.review-item:nth-child(3n + 3) {
+  .review-item__wrapper::before {
+    background-color: $color-sapphire;
+  }
+
+  .review-item__author {
+    color: $color-sapphire;
+  }
+}

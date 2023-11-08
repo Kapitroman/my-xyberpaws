@@ -1,0 +1,55 @@
+mixin reviews()
+  - const title = "Reviews";
+  -
+    const reviewsData = [
+      {
+        "author": "Michael Bibbins",
+        "text": "I’ve worked with the guys on converting our users into customers. I was impressed by their out-of-the-box approach and the depth of their analysis. As a result, we’ve implemented a bunch of new things that helped increase my revenue – all of them executed by Xyperpaws"
+      },
+      {
+        "author": "Irene Sazon",
+        "text": "The work is always done well and on time. The problems are addressed right when they appear."
+      },
+      {
+        "author": "Watercolors Ltd",
+        "text": "We’ve contacted Xyperpaws for a audit of our website. We had two goals in mind: to get a professional opinion on the UX/UI aspect of our page and see if it’s ready to be promoted via contextual ads. The results made us happy: we got a detailed report on the needed improvements and a plant of actions. Later, we came back for the implementation of these changes."
+      },
+      {
+        "author": "Vladimir Stukalov",
+        "text": "The first thing we were asked to do is to fill out a very detailed brief about our business – even at that stage I saw numerous flaws in our approach. After the audit was finished, we worked on creating an action plan for the future development. Right now, we’re working on the implementation, but the progress is already visible!"
+      },
+      {
+        "author": "Gor Stepanyan",
+        "text": "If they say it’s ready, then it’s more than ready. I trust them fully. Convenient and always on time – I’m satisfied with the work."
+      },
+      {
+        "author": "Alice Bells",
+        "text": "Thank you for the speedy solution for my tasks!"
+      },
+      {
+        "author": "Sergey Buhgholtsev",
+        "text": "Xyperpows is a friendly and professional team who puts the customer first. The prices are lower than I expected, and the solutions are always original. Even if the task seems impossible to complete, they’ll find a way around it without ripping you off."
+      },
+      {
+        "author": "Eugene",
+        "text": "Not the first time I’m working with these folks, and they always give 100%. In case of minor mistakes, they’re quick to fix them – 10/10."
+      },
+      {
+        "author": "David",
+        "text": "The quality of work is impeccable, and everything’s always done on time. Perfect customer service!"
+      }
+    ];
+
+  section#reviews.reviews
+    h2.title=title
+    .reviews__slider.swiper
+      .swiper-wrapper
+        each review in reviewsData
+          +review-item(review)
+      .reviews__buttons
+        +btn({
+          icon: ["arrow-left", 12, 10]
+        }).btn--transparent.btn--slider.reviews__button-prev
+        +btn({
+          icon: ["arrow-right", 12, 10]
+        }).btn--transparent.btn--slider.reviews__button-next

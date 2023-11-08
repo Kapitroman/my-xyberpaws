@@ -1,0 +1,29 @@
+.reviews {
+  display: flex;
+  flex-direction: column;
+
+  padding: size(50px) 0 size(100px) 0;
+
+  .title {
+    margin: 0 auto;
+    margin-bottom: size(35px);
+  }
+
+  &__slider {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .swiper-wrapper {
+    gap: size(30px);
+
+    margin-bottom: size(40px);
+  }
+
+  &__buttons {
+    display: flex;
+    gap: size(60px);
+
+    margin: 0 auto;
+  }
+}

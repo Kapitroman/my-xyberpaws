@@ -7,6 +7,7 @@ import {mobileVhFix} from './utils/mobile-vh-fix';
 import {Burger} from './modules/burger';
 import {StickyHeader} from './modules/sticky-header';
 import {initMoveTo} from './modules/init-move-to';
+import {initReviewsSlider} from './modules/init-reviews-slider';
 
 import {AnimationHero} from './modules/animation-hero';
 import {AnimationWeCanHelpYou} from './modules/animation-we-can-help-you';
@@ -41,11 +42,14 @@ window.addEventListener('DOMContentLoaded', () => {
     const stickyHeader = new StickyHeader();
     stickyHeader.init();
     initMoveTo();
+    // initReviewsSlider();
 
     new AnimationHero();
     new AnimationWeCanHelpYou();
     new AnimationWhoWeAre();
     new AnimationCaseStudy();
+
+
   });
 });
 
