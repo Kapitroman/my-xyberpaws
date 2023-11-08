@@ -13,6 +13,8 @@ import {AnimationHero} from './modules/animation-hero';
 import {AnimationWeCanHelpYou} from './modules/animation-we-can-help-you';
 import {AnimationWhoWeAre} from './modules/animation-who-we-are';
 import {AnimationCaseStudy} from './modules/animation-case-study';
+import {AnimationReviews} from './modules/animation-reviews';
+
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -48,7 +50,7 @@ window.addEventListener('DOMContentLoaded', () => {
     new AnimationWeCanHelpYou();
     new AnimationWhoWeAre();
     new AnimationCaseStudy();
-
+    new AnimationReviews();
 
   });
 });
