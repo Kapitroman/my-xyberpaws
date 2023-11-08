@@ -1,10 +1,10 @@
-//const sliderSwiper = document.querySelector('.reviews__slider');
-const sliderSwiper = document.querySelector('.swiper');
+const sliderSwiper = document.querySelector('.reviews__slider');
 let swiper;
 
 const initSwiper = (slider) => {
-// eslint-disable-next-line no-undef
-
+  let swiperWidth = parseInt(getComputedStyle(slider).width, 10) / 48;
+  const parent = slider.closest('section');
+  // eslint-disable-next-line no-undef
   swiper = new Swiper(slider, {
     /*
     autoplay: {
@@ -12,26 +12,21 @@ const initSwiper = (slider) => {
       speed: 800,
       disableOnInteraction: false,
     },
+    loop: true,
     */
-    //loop: true,
-    //slidesPerView: 3,
-    //spaceBetween: 30,
-    /*
     breakpoints: {
       320: {
         slidesPerView: 1,
       },
-      1024: {
-        slidesPerView: 2,
-      },
-      1280: {
+      768: {
         slidesPerView: 3,
+        spaceBetween: swiperWidth,
       },
     },
-    */
+
     navigation: {
-      nextEl: slider.querySelector('.reviews__button-next'),
-      prevEl: slider.querySelector('.reviews__button-prev'),
+      nextEl: parent.querySelector('.reviews__button-next'),
+      prevEl: parent.querySelector('.reviews__button-prev'),
     }
   });
 };

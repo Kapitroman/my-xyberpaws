@@ -41,15 +41,16 @@ mixin reviews()
     ];
 
   section#reviews.reviews
-    h2.title=title
-    .reviews__slider.swiper
-      .swiper-wrapper
-        each review in reviewsData
-          +review-item(review)
+    .container
+      h2.title=title
+      .reviews__slider.swiper
+        .swiper-wrapper
+          each review in reviewsData
+            +review-item(review)
       .reviews__buttons
-        +btn({
-          icon: ["arrow-left", 12, 10]
-        }).btn--transparent.btn--slider.reviews__button-prev
-        +btn({
-          icon: ["arrow-right", 12, 10]
-        }).btn--transparent.btn--slider.reviews__button-next
+          +btn({
+            icon: ["arrow-left", 12, 10]
+          }).btn--transparent.btn--slider.reviews__button-prev
+          +btn({
+            icon: ["arrow-right", 12, 10]
+          }).btn--transparent.btn--slider.reviews__button-next

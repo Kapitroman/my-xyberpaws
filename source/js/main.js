@@ -42,7 +42,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const stickyHeader = new StickyHeader();
     stickyHeader.init();
     initMoveTo();
-    // initReviewsSlider();
+    initReviewsSlider();
 
     new AnimationHero();
     new AnimationWeCanHelpYou();

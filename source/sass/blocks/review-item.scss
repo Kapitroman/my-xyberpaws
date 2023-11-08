@@ -1,48 +1,43 @@
 .review-item {
+  position: relative;
+
   width: size(460px);
-  padding-top: size(35px);
-  background-color: $color-transparent;
+  padding: size(40px) size(44px) size(60px) size(44px);
+  border-radius: size(10px);
 
-  &__wrapper {
-    position: relative;
+  background-color: $color-default-white;
 
-    padding: size(40px) size(44px) size(82px) size(44px);
-    border-radius: size(10px);
+  &::before {
+    position: absolute;
+    top: size(-35px);
+    left: calc(50% - size(35px));
 
-    background-color: $color-default-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    &::before {
-      position: absolute;
-      top: size(-35px);
-      left: calc(50% - size(35px));
+    content: attr(data-letter);
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    width: size(70px);
+    height: size(70px);
+    border-radius: 50%;
+    border: size(5px) solid $color-default-white;
 
-      content: attr(data-letter);
+    font-family: $ff-druk-cond-super;
+    font-style: normal;
+    font-weight: 1000;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-size: size(30px);
+    line-height: size(24px);
+    color: $color-default-white;
 
-      width: size(70px);
-      height: size(70px);
-      border-radius: 50%;
-      border: size(5px) solid $color-default-white;
-
-      font-family: $ff-druk-cond-super;
-      font-style: normal;
-      font-weight: 1000;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      font-size: size(30px);
-      line-height: size(24px);
-      color: $color-default-white;
-
-      background-color: $color-navy-blue;
-    }
+    background-color: $color-navy-blue;
   }
 
   &__author {
     margin: 0;
-    margin-bottom: size(63px);
+    margin-bottom: size(40px);
 
     font-style: italic;
     font-size: size(14px);
@@ -52,12 +47,19 @@
   }
 
   &__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: calc(100% - size(60px));
     margin: 0;
+
+    text-align: center;
   }
 }
 
 .review-item:nth-child(3n + 1) {
-  .review-item__wrapper::before {
+  &::before {
     background-color: $color-hollywood-cerise;
   }
 
@@ -67,7 +69,7 @@
 }
 
 .review-item:nth-child(3n + 2) {
-  .review-item__wrapper::before {
+  &::before {
     background-color: $color-harlequin;
   }
 
@@ -77,7 +79,7 @@
 }
 
 .review-item:nth-child(3n + 3) {
-  .review-item__wrapper::before {
+  &::before {
     background-color: $color-sapphire;
   }
 
