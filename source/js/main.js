@@ -14,6 +14,7 @@ import {AnimationWeCanHelpYou} from './modules/animation-we-can-help-you';
 import {AnimationWhoWeAre} from './modules/animation-who-we-are';
 import {AnimationCaseStudy} from './modules/animation-case-study';
 import {AnimationReviews} from './modules/animation-reviews';
+import {AnimationWhatWeCanDo} from './modules/animation-what-we-can-do';
 
 // ---------------------------------
 
@@ -51,6 +52,7 @@ window.addEventListener('DOMContentLoaded', () => {
     new AnimationWhoWeAre();
     new AnimationCaseStudy();
     new AnimationReviews();
+    new AnimationWhatWeCanDo();
 
   });
 });
