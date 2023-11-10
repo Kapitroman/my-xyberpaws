@@ -3,13 +3,8 @@
   position: relative;
 
   display: flex;
-  width: 530px;
-  padding: 14px 0 28px 0;
 
-  @media screen and (max-width: 767px) {
-    padding: 4px 0 48px 0;
-    width: 100%;
-  }
+  width: 100%;
 
   label {
     display: flex;
@@ -24,16 +19,23 @@
     input,
     textarea {
       flex-grow: 1;
-      max-width: 300px;
-      min-height: 48px;
-      margin-left: auto;
-      padding: 10px;
 
-      border: 2px solid rgba(#000000, 0.2);
-      border-radius: 5px;
+      min-height: size(61px);
+      padding: size(20px);
+      border: 1px solid $color-white-smoke;
+      border-radius: size(5px);
       outline: none;
 
-      transition: border 0.3s ease;
+      transition: border $trans-default, background-color $trans-default;
+
+      font-family: $ff-roboto-mono;
+      font-weight: 400;
+      font-size: size(14px);
+      line-height: size(19px);
+      letter-spacing: -0.05em;
+      color: $color-navy-blue;
+
+      background-color: $color-white-smoke;
 
       @media screen and (max-width: 767px) {
         max-width: unset;
@@ -41,12 +43,18 @@
       }
 
       &:hover {
-        border: 2px solid rgba(#000000, 0.5);
+        border: 1px solid $color-navy-blue;
+        background-color: $color-default-white;
       }
 
       &:focus {
-        border: 2px solid rgba(#000000, 0.8);
+        border: 1px solid $color-sapphire;
+        background-color: $color-default-white;
       }
+    }
+
+    textarea {
+      min-height: size(120px);
     }
   }
 
@@ -75,22 +83,24 @@
   &.is-invalid {
     input,
     textarea {
-      border: 2px solid #ff1553;
+      border: 1px solid rgba($color-hollywood-cerise, 0.2);
+      background-color: rgba($color-hollywood-cerise, 0.2);
 
       &:focus,
       &:hover {
-        border: 2px solid rgba(#ff1553, 0.5);
+        border: 1px solid $color-hollywood-cerise;
       }
     }
   }
 
   &.is-valid {
     input {
-      border: 2px solid #22b259;
+      border: 1px solid rgbs($color-harlequin, 0.2);
+      background-color: rgba($color-harlequin, 0.2);
 
       &:focus,
       &:hover {
-        border: 2px solid rgba(#22b259, 0.5);
+        border: 1px solid $color-harlequin;
       }
     }
   }

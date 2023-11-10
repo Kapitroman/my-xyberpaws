@@ -1,0 +1,94 @@
+mixin contact-us()
+  - const title = "Let’s get this done!";
+  - text = "Tell me what you need, and we’ll make it happen";
+  -
+    const formData = {
+      actionForm: "sendmail.php",
+      nameForm: "sendmail",
+      nameField: {
+        placeholder: "Name*",
+        type: "text",
+        id: "name",
+        name: "name",
+      },
+      emailField: {
+        placeholder: "E-mail*",
+        type: "email",
+        id: "email",
+        name: "email",
+      },
+      commentsField: {
+        placeholder: "Comments",
+        id: "comments",
+        name: "comments",
+      },
+      legend: "Choose your favorite monster*",
+      toggles: [
+        "Need a website ASAP!",
+        "My website is meh...",
+        "How to improve my page?",
+        "Potential customers can't find my site",
+        "Want my website to look better ",
+        "Need API integrations done ",
+        "I have a unique request ",
+        "Create your perfect Shopify store",
+      ],
+    };
+  - const button = { type: "submit", text: "Sent It!" };
+
+  section#contacts.contact-us
+    .container
+      .contact-us__wrapper
+        .contact-us__container-image
+          p.contact-us__text=text
+          .contact-us__image
+            img(src="img/svg/snake-form.svg", width="786", heiht="550" alt="graphic image snake with pencil", loading="lazy")
+        .contact-us__content-form
+          h2.title=title
+          form.contact-us__form(action=formData.actionForm, name=formData.nameForm)
+            .contact-us__fields-container
+              fieldset.contact-us__field-group
+                +custom-input({
+                  inputPlaceholder: formData.nameField.placeholder,
+                  inputId: formData.nameField.id,
+                  inputName: formData.nameField.name,
+                  inputType: formData.nameField.type,
+                })
+              fieldset.contact-us__field-group
+                +custom-input({
+                  inputPlaceholder: formData.emailField.placeholder,
+                  inputId: formData.emailField.id,
+                  inputName: formData.emailField.name,
+                  inputType: formData.emailField.type,
+                })
+              fieldset.contact-us__field-group.fieldset.contact-us__field-group--wrapper
+                legend.contact-us__legend=formData.legend
+                .contact-us__field-wrapper
+                  each toggle, index in formData.toggles
+                    if index === 0
+                      +custom-toggle({
+                        inputChecked: true,
+                        inputType: "radio",
+                        inputLabel: toggle,
+                        inputValue: toggle,
+                        inputId: `problem-${index}`,
+                        inputName: "problem",
+                      }).custom-toggle--radio
+                    else
+                      +custom-toggle({
+                        inputType: "radio",
+                        inputLabel: toggle,
+                        inputValue: toggle,
+                        inputId: `problem-${index}`,
+                        inputName: "problem",
+                      }).custom-toggle--radio
+              fieldset.contact-us__field-group
+                +custom-textarea({
+                  inputPlaceholder: formData.commentsField.placeholder,
+                  inputId: formData.commentsField.id,
+                  inputName: formData.commentsField.name,
+                })
+            +btn({
+              type: button.type,
+              text: button.text
+            })

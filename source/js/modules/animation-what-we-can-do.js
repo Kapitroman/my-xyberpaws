@@ -1,6 +1,5 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-//import {splitText} from '../utils/split-text';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -11,13 +10,8 @@ export class AnimationWhatWeCanDo {
     this.titlePrimary = this.parent.querySelector('h2.title.title--rotation');
     this.titleSecondary = this.parent.querySelector('p.title.title--rotation');
     this.contentList = this.parent.querySelector('.what-we-can-do__content-list')
-    //this.title = this.parent.querySelector('.title');
-    //this.titleTranslateY = parseInt(getComputedStyle(this.title).height, 10) + 10;
     this.cards = this.contentList.querySelectorAll('.content-item');
     this.button = this.parent.querySelector('.btn');
-    //this.splitText = splitText;
-    //this.splitText(this.title);
-    //this.words = this.parent.querySelectorAll('.word');
     this.image = this.parent.querySelector('.what-we-can-do__content-image img');
 
     this.animateTitle();

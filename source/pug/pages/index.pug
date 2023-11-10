@@ -11,79 +11,12 @@ block variables
 
 block main
   main
-    //- на странице запрещен "голый" код
-    //- все блоки вставляются из папки pug/components/blocks
-
     +hero()
     +we-can-help-you()
     +who-we-are()
     +case-study()
     +reviews()
     +what-we-can-do()
-
-    -
-      const dataItems = [
-        {
-          title: "Need a website ASAP!",
-          description: "You got it! Choose a platform like Shopify, OpenCart, and WordPress, or tell us to develop something custom.",
-        },
-        {
-          title: false,
-          description: "Added upselling to the Thank you page to increase the conversion rate by 5.64%",
-        }
-      ];
-
-    +content-item(dataItems[0])
-    +content-item(dataItems[1]).content-item--with-out-title
-
-    +intro()
-
-    +intro()
-    h2.title we can help you if
-    +intro()
-      h2 HELP
-    +intro()
-    +intro()
-    +intro()
-    section(id="about")
-      h2 ABOUT
-    +intro()
-    +intro()
-    //-+intro()
-    section(id="cases")
-      h2 CASES
-    +intro()
-    +intro()
-    +intro()
-    section(id="reviews")
-      h2 REVIEWS
-    +intro()
-    +intro()
-    +intro()
-    section(id="whatwedo")
-      h2 WHATWEDO
-    +intro()
-    +intro()
-    +intro()
-    section(id="contacts")
-      h2 CONTACTS
-    +intro()
-    +intro()
-    +intro()
-    +btn({
-      href: "#",
-      text: "Book A Call",
-    })
-    +btn({
-      href: "#",
-      text: "Book A Call",
-    }).btn--transparent
-    +btn({
-      icon: ["arrow-left", 12, 10]
-    }).btn--transparent.btn--slider
-    +btn({
-      href: "#",
-      text: "Book A Call",
-    }).btn--big
+    +contact-us()
 
 block modals
