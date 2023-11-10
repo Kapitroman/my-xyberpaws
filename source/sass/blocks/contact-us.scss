@@ -99,6 +99,10 @@
     margin: 0;
     padding: 0;
     border: none;
+
+    .custom-input + .custom-input {
+      margin-top: size(10px);
+    }
   }
 
   .contact-us__field-group--wrapper {
