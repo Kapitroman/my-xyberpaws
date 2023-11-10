@@ -2,7 +2,6 @@
 .idea
 .vscode
 .nvmrc
-build
 *.ai
 *.log
 *.psd
