@@ -1,6 +1,7 @@
 mixin logo()
   if(currentUrl === "index.html")
-    .logo
+    //-.logo
+    a.logo(href="index.html#hero", aria-label="Переход на главную", data-trigger="")
       +icon("logo", 104, 60)
       span.visually-hidden Logo
   else
