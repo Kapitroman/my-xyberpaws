@@ -2,7 +2,6 @@
 const baseSuccessCallback = (event) => {
   event.preventDefault();
   // В данном колбеке бэкендер, либо разработчик при необходимости будет писать запрос на отправку формы на сервер и обрабатывать возможные ошибки или успешную отправку формы на сервер
-  console.log(event.target);
   const url = event.target.getAttribute('action');
   fetch(url,
     {
@@ -13,15 +12,15 @@ const baseSuccessCallback = (event) => {
       if (response.ok) {
         // eslint-disable-next-line no-console
         console.log('Ваша форма успешна отправлена');
-        // modals.open('success');
+        modals.open('success');
         return;
       }
       throw new Error();
     })
-    .catch((err) =>{
+    .catch((err) => {
       // eslint-disable-next-line no-console
       console.error('Произошла ошибка отправки');
-      // modals.open('error');
+      modals.open('error');
     });
 };
 

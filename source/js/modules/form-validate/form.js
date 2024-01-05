@@ -116,7 +116,7 @@ export class Form {
 
   init() {
     this._validateParent = document.querySelectorAll('[data-form-validate]');
-    console.log(this._validateParent);
+
     if (!this._validateParent.length) {
       return;
     }
