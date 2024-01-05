@@ -1002,17 +1002,17 @@
                 <p class="contact-us__text">Tell me what you need, and we’ll make it happen</p>
                 <div class="contact-us__image"><img src="img/svg/snake-form.svg" width="786" heiht="550" alt="graphic image snake with pencil" loading="lazy"></div>
               </div>
-              <div class="contact-us__content-form">
+              <div class="contact-us__content-form" data-form-validate data-callback="base">
                 <h2 class="title">Let’s get this done!</h2>
                 <form class="contact-us__form" action="sendmail.php" name="sendmail">
                   <div class="contact-us__fields-container">
                     <fieldset class="contact-us__field-group">
-                      <div class="custom-input">
+                      <div class="custom-input" data-required data-validate-type="text">
                         <label>
                           <input type="text" id="name" name="name" placeholder="Name*">
                         </label>
                       </div>
-                      <div class="custom-input">
+                      <div class="custom-input" data-required data-validate-type="email">
                         <label>
                           <input type="email" id="email" name="email" placeholder="E-mail*">
                         </label>
@@ -1021,42 +1021,42 @@
                     <fieldset class="contact-us__field-group fieldset contact-us__field-group--wrapper">
                       <legend class="contact-us__legend">Choose your favorite monster*</legend>
                       <div class="contact-us__field-wrapper">
-                        <div class="custom-toggle custom-toggle--radio">
+                        <div class="custom-toggle custom-toggle--radio" data-required>
                           <label>
                             <input type="radio" value="Need a website ASAP!" id="problem-0" name="problem" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Need a website ASAP!</span>
                           </label>
                         </div>
-                        <div class="custom-toggle custom-toggle--radio">
+                        <div class="custom-toggle custom-toggle--radio" data-required>
                           <label>
                             <input type="radio" value="My website is meh..." id="problem-1" name="problem"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">My website is meh...</span>
                           </label>
                         </div>
-                        <div class="custom-toggle custom-toggle--radio">
+                        <div class="custom-toggle custom-toggle--radio" data-required>
                           <label>
                             <input type="radio" value="How to improve my page?" id="problem-2" name="problem"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">How to improve my page?</span>
                           </label>
                         </div>
-                        <div class="custom-toggle custom-toggle--radio">
+                        <div class="custom-toggle custom-toggle--radio" data-required>
                           <label>
                             <input type="radio" value="Potential customers can't find my site" id="problem-3" name="problem"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Potential customers can't find my site</span>
                           </label>
                         </div>
-                        <div class="custom-toggle custom-toggle--radio">
+                        <div class="custom-toggle custom-toggle--radio" data-required>
                           <label>
                             <input type="radio" value="Want my website to look better " id="problem-4" name="problem"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Want my website to look better </span>
                           </label>
                         </div>
-                        <div class="custom-toggle custom-toggle--radio">
+                        <div class="custom-toggle custom-toggle--radio" data-required>
                           <label>
                             <input type="radio" value="Need API integrations done " id="problem-5" name="problem"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Need API integrations done </span>
                           </label>
                         </div>
-                        <div class="custom-toggle custom-toggle--radio">
+                        <div class="custom-toggle custom-toggle--radio" data-required>
                           <label>
                             <input type="radio" value="I have a unique request " id="problem-6" name="problem"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">I have a unique request </span>
                           </label>
                         </div>
-                        <div class="custom-toggle custom-toggle--radio">
+                        <div class="custom-toggle custom-toggle--radio" data-required>
                           <label>
                             <input type="radio" value="Create your perfect Shopify store" id="problem-7" name="problem"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Create your perfect Shopify store</span>
                           </label>

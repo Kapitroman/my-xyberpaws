@@ -43,7 +43,7 @@ mixin contact-us()
           p.contact-us__text=text
           .contact-us__image
             img(src="img/svg/snake-form.svg", width="786", heiht="550" alt="graphic image snake with pencil", loading="lazy")
-        .contact-us__content-form
+        .contact-us__content-form(data-form-validate, data-callback="base")
           h2.title=title
           form.contact-us__form(action=formData.actionForm, name=formData.nameForm)
             .contact-us__fields-container
@@ -53,13 +53,13 @@ mixin contact-us()
                   inputId: formData.nameField.id,
                   inputName: formData.nameField.name,
                   inputType: formData.nameField.type,
-                })
+                })(data-required, data-validate-type="text")
                 +custom-input({
                   inputPlaceholder: formData.emailField.placeholder,
                   inputId: formData.emailField.id,
                   inputName: formData.emailField.name,
                   inputType: formData.emailField.type,
-                })
+                })(data-required, data-validate-type="email")
               fieldset.contact-us__field-group.fieldset.contact-us__field-group--wrapper
                 legend.contact-us__legend=formData.legend
                 .contact-us__field-wrapper
@@ -72,7 +72,7 @@ mixin contact-us()
                         inputValue: toggle,
                         inputId: `problem-${index}`,
                         inputName: "problem",
-                      }).custom-toggle--radio
+                      }).custom-toggle--radio(data-required)
                     else
                       +custom-toggle({
                         inputType: "radio",
@@ -80,7 +80,7 @@ mixin contact-us()
                         inputValue: toggle,
                         inputId: `problem-${index}`,
                         inputName: "problem",
-                      }).custom-toggle--radio
+                      }).custom-toggle--radio(data-required)
               fieldset.contact-us__field-group
                 +custom-textarea({
                   inputPlaceholder: formData.commentsField.placeholder,
