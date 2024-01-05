@@ -1371,12 +1371,12 @@ button {
 @media (hover: hover) {
   a[href]:hover:not(.focus-visible),
 button:hover:not(.focus-visible) {
-    opacity: 0.7;
+    opacity: 0.7 !important;
   }
 }
 a[href].focus-visible:focus,
 button.focus-visible:focus {
-  opacity: 0.7;
+  opacity: 0.7 !important;
 }
 
 .wrapper {
